@@ -1,0 +1,114 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Background */
+    --bg-primary: #F4F5FB;
+    --bg-secondary: #FFFFFF;
+
+    /* Cores */
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+    --font-family: 'Inter', sans-serif;
+    --title: 800 24px/32px var(--font-family);
+    --label: 700 16px/20px var(--font-family);
+    --parag: 500 16px/20px var(--font-family);
+    --link: 500 14px/16px var(--font-family);
+
+    --max-widht: 327px;
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+main {
+    max-width: var(--max-widht);
+    margin-inline: auto; /* deixa o conteudo no meio automaticamente da pagina */
+    display: grid; /* deixa block, ou seja, um em baixo do outro */
+    gap: 2.75rem;
+    padding: 5rem 2rem;
+    
+    & #back {
+        display: grid;
+        gap: 1rem;
+
+        & span {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+            color: var(--color-brand);
+            font: var(--link);
+            transition: filter 200ms ease;
+
+            & img {
+                rotate: 180deg;
+            }
+
+            &:hover {
+                filter: brightness(85%);
+            }
+        }
+
+        h1 {
+            font: var(--title);
+            color: var(--content-primary);
+        }
+    }
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+
+    & input {
+        width: 100%;
+        height: 2.75rem;
+        padding-left: 1rem;
+        border-radius: 12px;
+        border: 2px solid var(--border-primary);
+        background-color: var(--bg-secondary);
+        transition: border 400ms ease;
+
+        &::placeholder {
+            color: var(--content-tertiary);
+            font: 400 1rem/1.4 var(--f-f);
+        }
+
+        &:hover {
+            border-color: var(--color-brand-hover);
+        }
+
+        &:focus {
+            border: 2px solid var(--color-brand);
+            outline: none;
+        }
+    }
+
+    & button {
+        cursor: pointer;
+        width: 100%;
+        height: 2.75rem;
+        border: none;
+        background: var(--color-brand);
+        font: var(--label);
+        color: #FFFFFF;
+        border-radius: .75rem;
+        transition: background-color 400ms ease;
+        &:hover {
+            background-color: var(--color-brand-hover);
+        }
+    }
+}

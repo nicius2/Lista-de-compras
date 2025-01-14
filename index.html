@@ -13,5 +13,27 @@
     <header>
         <img src="assets/icons/logo.svg" alt="logo do site">
     </header>
+
+    <main>
+        <div id="back">
+            <span><img src="./assets/icons/arrow.svg" alt="">Voltar</span>
+            <h1>Compras da semana</h1>
+        </div>
+
+        <!-- Formulário -->
+        <form>
+            <div>
+            <input type="text" placeholder="Adicione um novo item">
+            <div id="errormessage" class="delet"><img src="./assets/icons/alert.svg" alt="">
+            Digite um item para sua lista!</div>
+            </div>
+            <button type="submit">Adicionar item</button>
+        </form>
+
+        <!-- Lista de item -->
+        <ul [role="list"]></ul>
+
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
